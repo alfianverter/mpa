@@ -27,7 +27,7 @@ setInterval(() => {
 
 music.on('message', async message => {
 
-    let prefix = 'mpk!';
+    let prefix = '=!';
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(" ");
     let cmd = args.shift().toLowerCase();
@@ -90,16 +90,7 @@ const wordAnswer = pokesamwan[Math.floor(Math.random() * pokesamwan.length)]
 music.login(process.env.TOKEN);
 
 music.on("ready", async () => {
-function botStatus() {  
-let status = [
-`mpk!join - mpk!leave`,
-`in ${music.guilds.size} server.`,
-`24H active`,
-`https://discord.gg/3pe7c6h`
-  ];
-  let rstatus = Math.floor(Math.random() * status.length);
-  music.user.setActivity(status[rstatus], {Type: 'STREAMING', url:'https://www.twitch.tv/verterid'});
-}; setInterval(botStatus, 10000)    
+music.user.setActivity('Server Terbaik #1')
 console.log("ready");
     console.log(`Logged in as : ${music.user.tag}`);
     console.log(`${music.user.username} is ready!`)
